@@ -55,22 +55,13 @@ def predict_progression(house_rent: HouseData):
     ]])
     
     # Make prediction
-    prediction = model.predict(features)[0]
+    prediction = model.predict(features)
     
     # Return result with additional context
     return {
-        "predicted_progression_score": round(prediction, 2),
-        "interpretation": get_interpretation(prediction)
+        "MONTHLY_RENT": prediction,
     }
  
-def get_interpretation(score):
-    """Provide human-readable interpretation of the score"""
-    if score < 100:
-        return "Below average progression"
-    elif score < 150:
-        return "Average progression"
-    else:
-        return "Above average progression"
     
 
 
