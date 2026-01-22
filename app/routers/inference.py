@@ -40,6 +40,6 @@ def create_prediction(
     db.refresh(db_job)
 
     # Dispatch background task
-    background_tasks.add_task(tasks.process_ml_job, job_id)
+    background_tasks.add_task(tasks.process_ml_job, job_id, job_in.text)
 
     return db_job

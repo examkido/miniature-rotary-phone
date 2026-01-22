@@ -1,4 +1,4 @@
-# Secure ML Inference API (Practice 03)
+# Exam Deploy model with predict
 
 An asynchronous ML inference API secured with API Key authentication, Rate Limiting, and Input Validation.
 
