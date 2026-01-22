@@ -37,14 +37,14 @@ app = FastAPI(
 )
  
 # Load the trained model
-model_path = os.path.join("models", "house_model_01.pkl")
+model_path = os.path.join("models", "house_model_02.pkl")
 with open(model_path, 'rb') as f:
     model = pickle.load(f)
 
 
 
 @app.post("/predict")
-def predict_progression(house_rent: HouseData):
+def predict_house_rent(house_rent: HouseData):
     """
     Predict monthly rent progression score
     """
